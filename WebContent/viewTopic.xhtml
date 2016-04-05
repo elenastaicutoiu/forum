@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>View topic</title>
+</head>
+<body>
+    <h:form id="form">
+        <h:panelGrid id="grid" columns="1">
+            <h:outputText id="title" value="#{topic.title}"/>
+            <h:outputText id="description" value="#{topic.description}"/>
+            <h:dataTable var="comment" value="#{topic.comments}">
+	        	<h:column>
+	        		<f:facet name="header">
+	        			<h:outputText value="Comments"/>
+	        		</f:facet>
+	        		<h:outputText value="#{comment.commentText}"/>
+	        	</h:column>
+        	</h:dataTable>
+        	
+        	<h:inputText id="newComment" value="#{topic.newComment.commentText}"/>
+        	<h:commandButton value="save" action="#{topic.saveNewComment}"/>
+        </h:panelGrid>
+        
+        
+    </h:form>
+</body>
+</html>
