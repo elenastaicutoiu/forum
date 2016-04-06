@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html
-        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-        xmlns:f="http://java.sun.com/jsf/core"
-        xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
-        <!-- Latest compiled and minified CSS -->
-<head>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Cover Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"></link>
 
 <!-- Optional theme -->
@@ -23,7 +21,10 @@
 
     <!-- Custom styles for this template -->
     
-    <link href="cover2.css" rel="stylesheet"></link>
+    <link href="cover.css" rel="stylesheet"></link>
+
+  
+
     
   </head>
 
@@ -40,7 +41,7 @@
               <h3 class="masthead-brand">AForum</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li><a href="./main.xhtml">Home</a></li>
+                  <li class="active"><a href="./main.xhtml">Home</a></li>
                   <li><a href="./index.xhtml">Topics</a></li>
                   <li><a href="#">About</a></li>
                 </ul>
@@ -49,28 +50,27 @@
           </div>
 
           <div class="inner cover">
-	         <div class="comments">
-			    <h:form id="form">
-			    	<h:panelGrid id="grid" columns="2">
-			            <!--  <h:outputLabel value="Title:" for="title" />-->
-			            <h:inputText id="title" value="#{baseTopic.title}" a:placeholder="Title"
-			            	style="color:black;margin-top: 70px;width: 700px;height: 70px;"/>
-			            
-			            <!-- <h:outputLabel value="Description" for="description"/> -->
-			            <h:inputTextarea id="description" value="#{baseTopic.description}" a:placeholder="Desciption"
-			            	style="color:black;margin-top: 70px;width: 700px;height: 70px;"/>
-			            	
-			            <h:commandButton id="save" action="#{baseTopic.saveTopic}" value="Save"  
-			            	style="color:black;backgroud-color:#ffffff;background-color: white !important; box-shadow: none !important; border: none !important; margin: 20px !important;"/>
-			        </h:panelGrid>
-			    </h:form>
-    		</div>
+            <h1 class="cover-heading">An awesome forum</h1>
+            <p class="lead">Discuss here about any subject. If you want to talk about something specific, open a new topic and wait for replies.</p>
+            <p class="lead">
+              <a href="./index.xhtml" class="btn btn-lg btn-default">See topics</a>
+            </p>
+            
           </div>
+
+     <!--     <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+          -->  
+
         </div>
+
       </div>
+
     </div>
-    
-    
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -79,5 +79,5 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     IE10 viewport hack for Surface/desktop Windows 8 bug 
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
-</body>
+  </body>
 </html>

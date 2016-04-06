@@ -152,7 +152,6 @@ public class DatabaseHelper {
 			initConnection();
 			try {
 				Statement stmt = (Statement) connection.createStatement();
-				ResultSet rs;
 							
 				stmt.executeUpdate(
 						String.format("INSERT INTO topics(TOPIC_TITLE, TOPIC_DESCRIPTION) VALUES('%s','%s');",
